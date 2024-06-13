@@ -103,4 +103,10 @@ in
     action = ">gv";
     options.desc = "Indent line";
   }
+  {
+    mode = "i";
+    key = "jk";
+    action = "<Esc>";
+    options.desc = "Escape";
+  }
 ]
