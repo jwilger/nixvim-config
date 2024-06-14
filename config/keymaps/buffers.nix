@@ -25,7 +25,7 @@
   }
   {
     mode = "n";
-    key = "]b";
+    key = "<Tab>";
     options.desc = "Next buffer in tabline";
 
     action.__raw = ''
@@ -36,7 +36,7 @@
   }
   {
     mode = "n";
-    key = "[b";
+    key = "<S-Tab>";
     options.desc = "Previous buffer in tabline";
 
     action.__raw = ''
