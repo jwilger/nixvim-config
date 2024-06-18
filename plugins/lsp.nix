@@ -86,7 +86,7 @@
       docker-compose-language-service.enable = true;
       dockerls.enable = true;
       eslint.enable = true;
-      elixirls.enable = true;
+      elixirls.enable = false;
       gopls.enable = true;
       helm-ls.enable = true;
       html.enable = true;
@@ -111,7 +111,20 @@
   extra = {
     packages = [pkgs.vimPlugins.elixir-tools-nvim];
     config = ''
-    require('elixir').setup()
+    require('elixir').setup({
+      nextls = {
+        enable = true,
+        init_options = {
+          experimental = {
+            completions = {
+              enable = true
+            }
+          }
+        }
+      },
+      credo = {enable = false},
+      elixirls = {enable = false}
+    })
     '';
   };
 
