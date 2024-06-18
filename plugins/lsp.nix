@@ -113,7 +113,7 @@
     config = ''
     require('elixir').setup({
       nextls = {
-        enable = true,
+        enable = false,
         init_options = {
           experimental = {
             completions = {
@@ -122,8 +122,8 @@
           }
         }
       },
-      credo = {enable = false},
-      elixirls = {enable = false}
+      credo = {enable = true},
+      elixirls = {enable = true}
     })
     '';
   };
