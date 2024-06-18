@@ -108,6 +108,13 @@
     };
   };
 
+  extra = {
+    packages = [pkgs.vimPlugins.elixir-tools-nvim];
+    config = ''
+    require('elixir').setup()
+    '';
+  };
+
   rootOpts = {
     colorschemes.catppuccin.settings.integrations.native_lsp.enabled = true;
     extraPackages = [ pkgs.go ];
