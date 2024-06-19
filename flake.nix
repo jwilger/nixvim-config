@@ -2,7 +2,12 @@
   description = "NixVim config heavily inspired by AstroNvim";
 
   inputs = {
-    nixpkgs.url = "github:jwilger/nixpkgs/nixpkgs-unstable";
+    nixpkgs = {
+      type = "github";
+      owner = "jwilger";
+      repo = "nixpkgs";
+      ref = "nixpkgs-unstable";
+    };
 
     # Nix formatting pack
     # https://gerschtli.github.io/nix-formatter-pack/nix-formatter-pack-options.html
